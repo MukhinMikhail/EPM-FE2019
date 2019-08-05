@@ -1,0 +1,57 @@
+.environment {
+  background: $environmentBackground;
+
+  & .environment__content {
+    @include content-block;
+    padding-bottom: 102px;
+
+    & .environment__title {
+      @include title;
+      margin-top: 0;
+      padding-top: 70px;
+    }
+
+    .environment__image {
+      margin-bottom: 12px;
+    }
+
+    .environment__wrapper {
+      display: inline-flex;
+      width: 100%;
+
+      .pictures__arrow {
+        width: 34px;
+        height: 69px;
+        background: $environmentArrowBackground;
+        position: relative;
+
+        &:hover {
+          background: $environmentHoverArrowBackground;
+        }
+
+        &.pictures__arrow_left::after {
+          content: "";
+          background: url(../img/leftArrow.png) no-repeat center center;
+          position: absolute;
+          width: 9px;
+          height: 14px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        &.pictures__arrow_right::after {
+          @extend .pictures__arrow_left::after;
+          transform: translate(-50%, -50%) rotate(180deg);
+        }
+      }
+
+      .environment__picture-block {
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0 5px;
+      }
+    }
+  }
+}

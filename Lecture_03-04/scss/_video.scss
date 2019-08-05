@@ -1,0 +1,64 @@
+.video {
+  background: $videoBackground;
+  overflow: hidden;
+  margin-bottom: 70px;
+
+  &__title {
+    @include title;
+    color: $videoTextColor;
+    margin: 0 0 40px;
+    padding-top: 76px;
+  }
+
+  .video__wrapper {
+    display: inline-flex;
+    transform: translateX(-392px);
+    margin-bottom: 112px;
+
+    .video__item {
+      display: inline-flex;
+      margin: 0 18px;
+      flex-direction: column;
+
+      &:last-child .video__timer {
+        display: none;
+      }
+
+      .video__image {
+        position: relative;
+        margin-bottom: 20px;
+
+        &::after {
+          content: "";
+          background: url(../img/playIcon.png) no-repeat center center;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        &.video__image_constant-width::after {
+          left: 50%;
+        }
+      }
+
+      .video__info {
+        display: inline-flex;
+        justify-content: space-between;
+
+        .video__name {
+          @include itemTitle;
+          color: $videoTextColor;
+          font-size: 10.5px;
+        }
+
+        .video__timer {
+          @include itemTitle;
+          color: $videoTextColor;
+          font-size: 10.5px;
+        }
+      }
+    }
+  }
+}

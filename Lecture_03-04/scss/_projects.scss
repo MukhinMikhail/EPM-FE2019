@@ -1,0 +1,59 @@
+.projects {
+  margin-bottom: 78px;
+
+  &__title {
+    @include title;
+    margin-top: 0;
+    margin-bottom: 46px;
+  }
+
+  &__items {
+    display: inline-flex;
+
+    .items__subject {
+      &:nth-child(2n + 2) .subject__info-block {
+        background: #e4e4e4;
+      }
+
+      &:hover {
+        .subject__info-block {
+          background: $unhoverBackground;
+        }
+
+        .subject__cta {
+          @include buttonHover;
+        }
+      }
+
+      .subject__image-container {
+        display: flex;
+
+        .subject__image {
+          width: 350px;
+        }
+      }
+
+      .subject__info-block {
+        padding: 46px 35px 47px 44px;
+        background: #efefef;
+      }
+
+      .subject__title {
+        @include itemTitle;
+        color: #000000;
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
+
+      .subject__description {
+        @include itemDescription;
+        color: $itemsDescriptionColor;
+        margin-bottom: 12px;
+      }
+
+      .subject__cta {
+        @include buttonLarge;
+      }
+    }
+  }
+}

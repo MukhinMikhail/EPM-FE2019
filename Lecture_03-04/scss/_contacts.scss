@@ -1,0 +1,47 @@
+.contacts {
+  display: inline-flex;
+  width: 100%;
+  background: $contactsBackground;
+  margin-bottom: 80px;
+
+  .contacts__map {
+    margin-right: 43px;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .contacts__title {
+      @include title;
+      text-align: left;
+      margin: 40px 0 24px;
+    }
+
+    .contacts__label {
+      @include itemTitle;
+      font-size: 11px;
+      margin-bottom: 8px;
+    }
+
+    .contacts__input {
+      @include inputSmall;
+      padding: 5px;
+      box-sizing: border-box;
+      margin-bottom: 18px;
+
+      &_large {
+        @extend .contacts__input;
+        @include inputMedium;
+        resize: none;
+      }
+    }
+
+    .contacts__button {
+      @include buttonSend;
+      background: $contactsButtonBackground;
+      color: $contactsButtoncolor;
+    }
+  }
+}

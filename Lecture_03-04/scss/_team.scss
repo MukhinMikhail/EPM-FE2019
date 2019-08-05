@@ -1,0 +1,68 @@
+.team {
+  @include content-block;
+  max-width: 780px;
+  margin-bottom: 74px;
+
+  .team__title {
+    @include title;
+    margin: 0 0 44px;
+  }
+
+  .team__wrapper {
+    display: inline-flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+
+    .team__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33.3333%;
+      margin-bottom: 58px;
+
+      &:hover {
+        .team__image::after {
+          content: "";
+          width: 172px;
+          height: 172px;
+          background-color: #62497c;
+          opacity: 0.8;
+          display: block;
+          z-index: 2;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+        }
+      }
+
+      .team__image {
+        position: relative;
+        margin-bottom: 24px;
+
+        .team__photo {
+          border-radius: 50%;
+        }
+      }
+
+      .team__info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .team__name {
+          @include itemTitle;
+          margin-bottom: 8px;
+        }
+
+        .team__description {
+          @include itemDescription;
+          color: $itemsDescriptionColor;
+          font-weight: 700;
+          text-transform: capitalize;
+          font-size: $itemsDescriptionSize + 1px;
+        }
+      }
+    }
+  }
+}

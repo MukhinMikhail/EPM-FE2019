@@ -515,6 +515,15 @@ body {
           flex-direction: column;
 }
 
+.video .video__wrapper .video__item:hover .video__image::before {
+  content: "";
+  width: 100%;
+  height: 99%;
+  background-color: rgba(4, 4, 5, 0.39);
+  display: block;
+  position: absolute;
+}
+
 .video .video__wrapper .video__item:last-child .video__timer {
   display: none;
 }

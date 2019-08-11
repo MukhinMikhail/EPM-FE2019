@@ -1,12 +1,11 @@
-@import "constants";
 .video {
-  background: $videoBackground;
+  background: $mainBackgroundColor;
   overflow: hidden;
   margin-bottom: 70px;
 
   &__title {
     @include title;
-    color: $videoTextColor;
+    color: $siteMainColor;
     margin: 0 0 40px;
     padding-top: 76px;
   }
@@ -40,7 +39,7 @@
 
         &::after {
           content: "";
-          background: url(../img/playIcon.png) no-repeat center center;
+          background: url(../assets/img/playIcon.png) no-repeat center center;
           width: 100%;
           height: 100%;
           position: absolute;
@@ -59,13 +58,13 @@
 
         .video__name {
           @include itemTitle;
-          color: $videoTextColor;
+          color: $siteMainColor;
           font-size: 10.5px;
         }
 
         .video__timer {
           @include itemTitle;
-          color: $videoTextColor;
+          color: $siteMainColor;
           font-size: 10.5px;
         }
       }

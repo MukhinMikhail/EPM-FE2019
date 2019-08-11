@@ -1,7 +1,10 @@
 .blog {
-  @include content-block;
-  max-width: 728px;
   margin-bottom: 86px;
+
+  .blog__container {
+    @include content-block;
+    max-width: 728px;
+  }
 
   &::after {
     @include clearFix;
@@ -19,15 +22,15 @@
       float: left;
 
       &:hover {
-        .subject__cta {
+        .subject__button {
           @include buttonHover;
-          background-color: $blogHoverButtonBackground;
-          color: $blogButtonColor;
+          background-color: $alternativeBackgroundColor;
+          color: $buttonTextColor;
         }
       }
 
       .subject__image-container {
-        margin-bottom: 30px;
+        margin-bottom: 34px;
       }
     }
 
@@ -35,25 +38,22 @@
       padding: 0 15px;
 
       .subject__title {
-        @include itemTitle;
         padding: 0 10px;
       }
 
       .subject__date {
-        @include itemDescription;
-        color: $itemsDescriptionColor;
+        color: $subTextColor;
+        margin-bottom: 15px;
       }
 
       .subject__description {
-        @include itemDescription;
         font-size: 14px;
         margin-bottom: 26px;
       }
 
-      .subject__cta {
-        @include buttonMedium;
+      .subject__button {
         background-color: $blogButtonBackground;
-        color: $blogButtonColor;
+        color: $buttonTextColor;
       }
     }
   }

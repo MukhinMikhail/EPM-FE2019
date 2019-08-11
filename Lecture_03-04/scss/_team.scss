@@ -1,8 +1,10 @@
 .team {
-  @include content-block;
-  max-width: 780px;
   margin-bottom: 74px;
-
+  .team__container {
+    @include content-block;
+    max-width: 780px;
+  }
+  
   .team__title {
     @include title;
     margin: 0 0 44px;
@@ -57,7 +59,7 @@
 
         .team__description {
           @include itemDescription;
-          color: $itemsDescriptionColor;
+          color: $subTextColor;
           font-weight: 700;
           text-transform: capitalize;
           font-size: $itemsDescriptionSize + 1px;

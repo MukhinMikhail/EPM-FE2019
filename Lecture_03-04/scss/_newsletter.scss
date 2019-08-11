@@ -1,15 +1,14 @@
 .newsletter {
-  background: url(../img/newsletterBg.jpg) no-repeat top left;
+  background: url(../assets/img/newsletterBg.jpg) no-repeat top left;
   margin-bottom: 64px;
 
-  .newsletter__wrapper {
-    @include content-block;
+  .newsletter__container {
     width: 546px;
-    padding-bottom: 140px;
+    height: 327px;
 
     .newsletter__title {
       @include title;
-      color: $newsletterTextColor;
+      color: $siteMainColor;
       margin: 0 0 26px;
       padding-top: 48px;
     }

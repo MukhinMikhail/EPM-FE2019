@@ -1,20 +1,21 @@
 .header {
-  @include content-block;
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: inline-flex;
-  padding-top: 33px;
-  align-items: flex-end;
+  .header__container {
+    display: inline-flex;
+    margin-top: 33px;
+    align-items: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+  }
 
   &__link {
     @include textLink;
-    color: $headerMainColor;
+    color: $siteMainColor;
     font-size: 29.5px;
-    font-weight: $headerWeight;
+    font-weight: $fontWeightness;
     font-family: $mainFont;
     margin: 0;
     text-transform: $headerTextTransform;
@@ -37,16 +38,16 @@
 
       .menu__link {
         text-decoration: none;
-        color: $headerMainColor;
+        color: $siteMainColor;
         text-transform: $headerTextTransform;
         font-size: 10.5px;
         font-family: $mainFont;
-        font-weight: $headerWeight;
+        font-weight: $fontWeightness;
         letter-spacing: -0.1px;
         transition: 0.3s;
 
         &:hover {
-          color: $unhoverBackground;
+          color: $alternativeBackgroundColor;
         }
       }
     }

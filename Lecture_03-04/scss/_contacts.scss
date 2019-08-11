@@ -1,7 +1,7 @@
 .contacts {
   display: inline-flex;
   width: 100%;
-  background: $contactsBackground;
+  background: $alternativeBackgroundColor;
   margin-bottom: 80px;
 
   .contacts__map {
@@ -18,30 +18,34 @@
       text-align: left;
       margin: 40px 0 24px;
     }
-
-    .contacts__label {
-      @include itemTitle;
-      font-size: 11px;
-      margin-bottom: 8px;
-    }
-
-    .contacts__input {
-      @include inputSmall;
-      padding: 5px;
-      box-sizing: border-box;
-      margin-bottom: 18px;
-
-      &_large {
-        @extend .contacts__input;
-        @include inputMedium;
-        resize: none;
+    .contacts__form {
+      display: flex;
+      flex-direction: column;
+      
+      .contacts__label {
+        @include itemTitle;
+        font-size: 11px;
+        margin-bottom: 8px;
       }
-    }
 
-    .contacts__button {
-      @include buttonSend;
-      background: $contactsButtonBackground;
-      color: $contactsButtoncolor;
+      .contacts__input {
+        @include inputSmall;
+        padding: 5px;
+        box-sizing: border-box;
+        margin-bottom: 18px;
+
+        &_large {
+          @extend .contacts__input;
+          @include inputMedium;
+          resize: none;
+        }
+      }
+
+      .contacts__button {
+        @include buttonSend;
+        background: $mainBackgroundColor;
+        color: $siteMainColor;
+      }
     }
   }
 }

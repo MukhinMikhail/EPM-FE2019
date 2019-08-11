@@ -1,10 +1,9 @@
-@import "constants";
-@import "mixins";
-@import "body";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "common";
 @import "header";
 @import "slider";
 @import "intro";
-@import "reasons";
 @import "projects";
 @import "price";
 @import "video";

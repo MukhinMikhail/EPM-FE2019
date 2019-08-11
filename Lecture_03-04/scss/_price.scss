@@ -1,69 +1,41 @@
 .price {
-  @include content-block;
-  margin-bottom: 82px;
+  .price__container {
+    max-width: 714px;
+    margin-bottom: 88px;
 
-  .price__title {
-    @include title;
-    margin-top: 0;
-    margin-bottom: 34px;
-  }
-
-  .price__block {
-    width: 100%;
-    text-align: center;
-    .price__separate {
-      .price__seprarate-block {
-        background-color: #dedede;
-        height: 194px;
-        width: 2px;
-      }
+    .price__title {
+      @include title;
+      letter-spacing: -0.9px;
+      margin: 0 0 42px;
     }
 
-    .price__wrapper {
-      width: 33%;
-      text-align: center;
-
-      &:nth-child(2n + 2) {
-        width: auto;
-      }
-
-      &:hover {
-        .item__button {
-          .item__cta {
-            @include buttonHover;
-          }
+    .price__table {
+      .table__row {
+        .table_framed {
+          border-right: 2px solid #dedede;
         }
-      }
+        & .table_framed:last-child {
+          border-right: 0;
+        }
 
-      .price__item {
-        width: 100%;
-        text-align: center;
-      }
+        .table__title {
+          @include itemTitle;
+          padding-bottom: 16px;
+        }
 
-      .item__title {
-        @include itemTitle;
-        color: #040405;
-        padding-bottom: 15px;
-      }
-
-      .item__cost {
-        @include itemTitle;
-        color: $itemCostColor;
-        text-transform: capitalize;
-        padding-bottom: 8px;
-      }
-
-      .item__decription {
-        @include itemDescription;
-        color: #000;
-        font-size: 10.5px;
-        line-height: 2.1;
-        padding-bottom: 18px;
-      }
-
-      .item__button {
-        .item__cta {
-          @include buttonSmall;
+        .table__cost {
+          @include itemTitle;
+          color: $subTextColor;
+          text-transform: capitalize;
+          padding-bottom: 12px;
+        }
+        .table__text {
+          @include itemDescription;
+          font-size: 10px;
+          line-height: 20px;
+        }
+        .table__button-wrapper {
+          padding-top: 18px;
         }
       }
     }

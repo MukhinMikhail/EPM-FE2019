@@ -26,12 +26,12 @@
         position: relative;
 
         &:hover {
-          background: $environmentHoverArrowBackground;
+          background: $mainBackgroundColor;
         }
 
         &.pictures__arrow_left::after {
           content: "";
-          background: url(../img/leftArrow.png) no-repeat center center;
+          background: url(../assets/img/leftArrow.png) no-repeat center center;
           position: absolute;
           width: 9px;
           height: 14px;

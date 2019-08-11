@@ -3,12 +3,14 @@
   margin-bottom: 78px;
 
   &__slide.slide {
-    background: url(../img/main-banner.jpg);
-    padding: 182px 0 258.6px;
+    background: url(../assets/img/main-banner.jpg);
+    height: 693px;
 
-    .slide__content {
-      @include content-block;
-
+    .slide__container {
+      height:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       .slide__title {
         font-size: 40.5px;
         font-weight: 700;
@@ -16,7 +18,7 @@
         margin: 0;
         letter-spacing: -0.9px;
         padding-right: 31.5%;
-        color: $sliderTextColor;
+        color: $siteMainColor;
         padding-bottom: 30px;
       }
 
@@ -24,7 +26,7 @@
         font-family: $secondaryFont;
         font-size: 19px;
         font-weight: 100;
-        color: $sliderTextColor;
+        color: $siteMainColor;
         padding-bottom: 35px;
         margin: 0;
         padding-right: 32%;
@@ -63,5 +65,11 @@
         opacity: 1;
       }
     }
+  }
+  
+  &:hover .slide__title,
+  &:hover .slide__text,
+  &:hover .slide__button {
+    opacity: 1;
   }
 }

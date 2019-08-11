@@ -1,8 +1,10 @@
-.reasons {
-  @include content-block;
-  max-width: 804px;
 
-  .reasons__items {
+  .inro__container {
+    @include content-block;
+    max-width: 804px;
+  }
+  
+  .intro__items {
     display: inline-flex;
     margin-bottom: 58px;
 
@@ -13,7 +15,7 @@
       .subject__image-container {
         width: 81px;
         height: 81px;
-        background-color: $siteElemntsColor;
+        background-color: $mainBackgroundColor;
         display: inline-flex;
         justify-content: center;
         border-radius: 50%;
@@ -27,23 +29,21 @@
       }
 
       .subject__title {
-        @include itemTitle;
-        color: $siteElemntsColor;
+        color: $mainBackgroundColor;
         margin-bottom: 20px;
       }
 
       .subject__description {
-        @include itemDescription;
-        color: $itemsDescriptionColor;
+        color: $subTextColor;
         line-height: 1.9;
         margin-bottom: 30px;
         padding: 0 20px;
         font-size: 12.5px;
       }
 
-      .subject__cta {
+      .subject__button {
         @include buttonMedium;
-        background-color: $unhoverBackground;
+        background-color: $alternativeBackgroundColor;
 
         &:hover {
           @include buttonHover;
@@ -58,9 +58,8 @@
 
   .reasons__separate {
     height: 2px;
-    background: $lineColor;
+    background: $separateColor;
     width: 86%;
     margin: 0 auto;
     margin-bottom: 48px;
   }
-}

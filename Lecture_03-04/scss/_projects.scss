@@ -1,5 +1,5 @@
 .projects {
-  margin-bottom: 78px;
+  margin-bottom: 76px;
 
   &__title {
     @include title;
@@ -17,42 +17,39 @@
 
       &:hover {
         .subject__info-block {
-          background: $unhoverBackground;
-        }
-
-        .subject__cta {
-          @include buttonHover;
+          background: $alternativeBackgroundColor;
         }
       }
 
-      .subject__image-container {
-        display: flex;
-
-        .subject__image {
-          width: 350px;
-        }
+      .subject__image {
+        width: 350px;
       }
 
       .subject__info-block {
         padding: 46px 35px 47px 44px;
         background: #efefef;
+        align-items: flex-start;
       }
 
       .subject__title {
-        @include itemTitle;
         color: #000000;
         margin-top: 0;
         margin-bottom: 8px;
       }
 
       .subject__description {
-        @include itemDescription;
-        color: $itemsDescriptionColor;
+        color: $subTextColor;
         margin-bottom: 12px;
+        text-align: left;
       }
 
-      .subject__cta {
+      .subject__button {
         @include buttonLarge;
+        background-color: $siteMainColor;
+
+        &:hover {
+          @include buttonHover;
+        }
       }
     }
   }

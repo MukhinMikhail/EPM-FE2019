@@ -1,0 +1,102 @@
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.container {
+  @include content-block;
+  &.container_inline-flex {
+    display: inline-flex;
+  }
+}
+
+.clearfix {
+  @include clearFix;
+}
+
+.button {
+  @include buttonSmall;
+  &.button_small {
+    @include buttonSmall;
+  }
+  &.button_medium {
+    @include buttonMedium;
+  }
+  &.button_large {
+    @include buttonLarge;
+  }
+  &.button_xl {
+    @include buttonExtraLarge;
+  }
+  &.button_send {
+    @include buttonSend;
+  }
+  &:hover {
+    @include buttonHover;
+  }
+}
+
+.table {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+
+  .table__title,
+  .table__cost,
+  .table__row {
+    width: 33.3%;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.subject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    .subject__button_hover {
+      @include buttonHover;
+      background-color: $alternativeBackgroundColor;
+      color: $buttonTextColor;
+    }
+  }
+}
+.subject__image-container {
+  display: flex;
+}
+
+.subject__info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .subject__title {
+    @include itemTitle;
+  }
+  .subject__cost {
+    @include itemTitle;
+  }
+
+  .subject__list {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+  }
+  .subject__item{
+    @include itemDescription;
+  }
+  .subject__date {
+    @include itemDescription;
+    color: $subTextColor;
+  }
+
+  .subject__description {
+    @include itemDescription;
+  }
+
+  .subject__button {
+    background-color: $blogButtonBackground;
+    color: $buttonTextColor;
+  }
+}

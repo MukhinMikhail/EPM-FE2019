@@ -1,0 +1,96 @@
+.video {
+  background: $mainBackgroundColor;
+  overflow: hidden;
+  margin-bottom: 70px;
+
+  &__title {
+    @include title;
+    color: $siteMainColor;
+    margin: 0 0 40px;
+    padding-top: 76px;
+  }
+
+  .video__wrapper {
+    display: inline-flex;
+    transform: translateX(-392px);
+    margin-bottom: 112px;
+
+    .video__item {
+      display: inline-flex;
+      margin: 0 18px;
+      flex-direction: column;
+
+      &:hover .video__image::before {
+        content: "";
+        width: 100%;
+        height: 99%;
+        background-color: rgba(4, 4, 5, 0.39);
+        display: block;
+        position: absolute;
+      }
+
+      &:last-child .video__timer {
+        display: none;
+      }
+      .video__image {
+        position: relative;
+        margin-bottom: 20px;
+
+        .video__image-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          height: 121px;
+          width: 121px;
+          transform: translate(-50%, -48%);
+        }
+        .video__image-icon:focus {
+          animation-name: heartBeat;
+          animation-duration: 1s;
+          animation-iteration-count: infinite;
+        }
+        @keyframes heartBeat {
+          0% {
+            transform: translate(-50%, -48%) scale(1);
+          }
+          25% {
+            transform: translate(-50%, -48%) scale(1.1);
+          }
+          75% {
+            transform: translate(-50%, -48%) scale(0.95);
+          }
+          100% {
+            transform: translate(-50%, -48%) scale(1);
+          }
+        }
+
+        &.video__image_constant-width::after {
+          left: 50%;
+        }
+      }
+
+      .video__info {
+        display: inline-flex;
+        justify-content: space-between;
+
+        .video__name {
+          @include itemTitle;
+          color: $siteMainColor;
+          font-size: 10.5px;
+        }
+
+        .video__timer {
+          @include itemTitle;
+          color: $siteMainColor;
+          font-size: 10.5px;
+        }
+      }
+      &:first-child .video__image-icon{
+        left: 52%;
+      }
+      &:last-child .video__image-icon{
+        left: 100%;
+      }
+    }
+  }
+}

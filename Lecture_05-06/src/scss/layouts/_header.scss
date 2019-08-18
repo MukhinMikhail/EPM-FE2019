@@ -8,6 +8,7 @@
     z-index: 2;
     width: 100%;
     top: 33px;
+    max-width: 708px;
   }
 
   &__link {
@@ -32,9 +33,7 @@
 
       .menu__item {
         list-style: none;
-        padding: 0 2px 0 32px;
         transition: 0.2s;
-        height: 20px;
       }
 
       .menu__link {
@@ -48,7 +47,7 @@
         transition: 0.2s;
         display: flex;
         height: 100%;
-        align-items: center;
+        padding: 4px 17px;
         &:hover {
           color: $alternativeBackgroundColor;
           transform: scale(1.1);

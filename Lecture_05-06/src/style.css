@@ -366,6 +366,7 @@ body {
   z-index: 2;
   width: 100%;
   top: 33px;
+  max-width: 708px;
 }
 
 .header__link {
@@ -398,10 +399,8 @@ body {
 
 .header__menu.menu .menu__list .menu__item {
   list-style: none;
-  padding: 0 2px 0 32px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  height: 20px;
 }
 
 .header__menu.menu .menu__list .menu__link {
@@ -418,9 +417,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   height: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 4px 17px;
 }
 
 .header__menu.menu .menu__list .menu__link:hover {
@@ -514,8 +511,9 @@ body {
   border-radius: 50%;
   opacity: 0.6;
   margin-right: 6.8px;
-  -webkit-transform: 0.2s;
-          transform: 0.2s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
 }
 
 .slider__dots .slider__dot_active {
@@ -996,7 +994,7 @@ body {
 .team .team__wrapper .team__item .team__image .team__symbols .team__symbol {
   font-size: 20px;
   color: #fff;
-  margin: 0 8px;
+  padding: 0 8px;
 }
 
 .team .team__wrapper .team__item .team__info {
@@ -1379,6 +1377,11 @@ body {
   color: #fff;
 }
 
+.contacts .contacts__wrapper .contacts__form .contacts__button:hover {
+  color: rgba(4, 4, 5, 0.39);
+  background-color: #efefef;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1499,6 +1502,13 @@ body {
   margin-top: 0;
   text-decoration: none;
   color: #040405;
+  width: 60%;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.footer .footer__container .footer__column .column__link_indented {
+  margin: 2px 0;
 }
 
 .footer .footer__container .footer__column .column__text {

@@ -47,6 +47,10 @@
       .contacts__button {
         background: $mainBackgroundColor;
         color: $siteMainColor;
+        &:hover{
+          color: $subTextColor;
+          background-color: $sendButtonBackgroundHover;
+        }
       }
     }
   }

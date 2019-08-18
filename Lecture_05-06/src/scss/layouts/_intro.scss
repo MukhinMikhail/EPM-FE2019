@@ -1,4 +1,6 @@
 .intro {
+  padding:78px 0 46px;
+
   &__title {
     @include title;
     margin-bottom: 68px;
@@ -87,6 +89,5 @@
   .reasons__separate {
     height: 2px;
     background: $separateColor;
-    margin-bottom: 46px;
   }
 }

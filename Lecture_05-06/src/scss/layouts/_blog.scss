@@ -1,13 +1,9 @@
 .blog {
-  margin-bottom: 86px;
+  padding: 62px 0 88px;
 
   .blog__container {
     @include content-block;
     max-width: 728px;
-  }
-
-  &::after {
-    @include clearFix;
   }
 
   .blog__title {
@@ -21,19 +17,25 @@
     position: relative;
     justify-content: center;
 
+    & .items__subject:focus {
+      transform: scale(1.1);
+      z-index: 2;
+      transition: position 1s, transform 1s, padding 1s;
+      outline: 1px solid $alternativeBackgroundColor;
+    }
+    & .items__subject:first-child:focus {
+      transform: scale(1.1) translateX(85%);
+    }
+    & .items__subject:last-child:focus {
+      transform: scale(1.1) translateX(-85%);
+    }
+
     .items__subject {
       width: 33.3%;
       text-align: center;
       background: $siteMainColor;
       transition: position 1s, transform 1s, padding 1s;
 
-      &:focus {
-        padding: 10px 0;
-        position: absolute;
-        transform: scale(1.1);
-        z-index: 2;
-        transition: position 1s, transform 1s, padding 1s;
-      }
       &:hover {
         .subject__button {
           background-color: $alternativeBackgroundColor;
@@ -60,7 +62,7 @@
 
       .subject__description {
         font-size: 14px;
-        margin-bottom: 26px;
+        margin-bottom: 24px;
       }
 
       .subject__button {

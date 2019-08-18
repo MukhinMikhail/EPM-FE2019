@@ -1,14 +1,13 @@
 .environment {
+  padding:70px 0 102px;
   background: $environmentBackground;
 
   & .environment__content {
     @include content-block;
-    padding-bottom: 102px;
 
     & .environment__title {
       @include title;
       margin-top: 0;
-      padding-top: 70px;
     }
 
     .environment__image {
@@ -25,6 +24,7 @@
         background: $environmentArrowBackground;
         position: relative;
         transition: 0.2s;
+        cursor: pointer;
 
         &:hover {
           background: $mainBackgroundColor;

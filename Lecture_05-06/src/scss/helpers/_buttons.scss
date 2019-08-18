@@ -1,0 +1,19 @@
+.button {
+  @include buttonSmall;
+  cursor: pointer;
+  &.button_small {
+    @include buttonSmall;
+  }
+  &.button_medium {
+    @include buttonMedium;
+  }
+  &.button_large {
+    @include buttonLarge;
+  }
+  &.button_xl {
+    @include buttonExtraLarge;
+  }
+  &.button_send {
+    @include buttonSend;
+  }
+}

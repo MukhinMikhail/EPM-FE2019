@@ -1,5 +1,5 @@
 .team {
-  margin-bottom: 74px;
+  padding:70px 0 74px;
   .team__container {
     @include content-block;
     max-width: 780px;
@@ -54,9 +54,9 @@
           left: 50%;
           opacity: 0;
           visibility: hidden;
-          transition: 0.2s,transform 0.5s;
+          transition: 0.2s, transform 0.5s;
           z-index: 2;
-          transform:translate(-50%, -50%) rotate(0) scale(0);
+          transform: translate(-50%, -50%) rotate(0) scale(0);
           .team__symbol {
             font-size: 20px;
             color: #fff;
@@ -87,8 +87,8 @@
         .team__symbols {
           opacity: 1;
           visibility: visible;
-          transform: translate(-50%,-50%) rotate(360deg) scale(1);
-          transition: 0.2s,transform 0.5s;
+          transform: translate(-50%, -50%) rotate(360deg) scale(1);
+          transition: 0.2s, transform 0.5s;
         }
         .team__overlay {
           opacity: 0.8;

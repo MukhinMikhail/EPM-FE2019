@@ -1,13 +1,12 @@
 .video {
   background: $mainBackgroundColor;
   overflow: hidden;
-  margin-bottom: 70px;
+  padding-top: 78px;
 
   &__title {
     @include title;
     color: $siteMainColor;
     margin: 0 0 40px;
-    padding-top: 76px;
   }
 
   .video__wrapper {
@@ -49,20 +48,7 @@
           animation-duration: 1s;
           animation-iteration-count: infinite;
         }
-        @keyframes heartBeat {
-          0% {
-            transform: translate(-50%, -48%) scale(1);
-          }
-          25% {
-            transform: translate(-50%, -48%) scale(1.1);
-          }
-          75% {
-            transform: translate(-50%, -48%) scale(0.95);
-          }
-          100% {
-            transform: translate(-50%, -48%) scale(1);
-          }
-        }
+
 
         &.video__image_constant-width::after {
           left: 50%;
@@ -85,10 +71,10 @@
           font-size: 10.5px;
         }
       }
-      &:first-child .video__image-icon{
+      &:first-child .video__image-icon {
         left: 52%;
       }
-      &:last-child .video__image-icon{
+      &:last-child .video__image-icon {
         left: 100%;
       }
     }

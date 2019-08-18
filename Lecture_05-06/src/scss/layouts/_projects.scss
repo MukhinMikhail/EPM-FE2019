@@ -1,6 +1,4 @@
 .projects {
-  margin-bottom: 76px;
-
   &__title {
     @include title;
     margin-top: 0;
@@ -48,7 +46,6 @@
       }
 
       .subject__button {
-        @include buttonLarge;
         background-color: $siteMainColor;
 
         &:hover {

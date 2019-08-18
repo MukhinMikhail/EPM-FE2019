@@ -1,8 +1,7 @@
 .price {
+  padding: 76px 0 90px;
   .price__container {
     max-width: 708px;
-    margin-bottom: 88px;
-
     .price__title {
       @include title;
       letter-spacing: -0.9px;
@@ -27,7 +26,6 @@
         &:hover {
           .subject__info-block {
             transform: rotateX(360deg) scale(1.2);
-            
           }
           .subject__button {
             @include buttonHover;

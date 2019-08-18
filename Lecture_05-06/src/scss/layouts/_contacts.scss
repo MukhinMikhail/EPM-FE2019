@@ -2,7 +2,6 @@
   display: inline-flex;
   width: 100%;
   background: $alternativeBackgroundColor;
-  margin-bottom: 80px;
 
   .contacts__map {
     margin-right: 43px;
@@ -48,9 +47,6 @@
       .contacts__button {
         background: $mainBackgroundColor;
         color: $siteMainColor;
-        &:focus{
-          outline: 3px solid $siteMainColor;
-        }
       }
     }
   }

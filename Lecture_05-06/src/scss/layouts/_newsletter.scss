@@ -1,16 +1,14 @@
 .newsletter {
+  padding:48px 0 142px;
   background: url(../assets/img/newsletterBg.jpg) no-repeat top left;
-  margin-bottom: 64px;
 
   .newsletter__container {
     width: 546px;
-    height: 327px;
 
     .newsletter__title {
       @include title;
       color: $siteMainColor;
       margin: 0 0 26px;
-      padding-top: 48px;
     }
 
     .newsletter__form {
@@ -22,7 +20,7 @@
         width: 100%;
         height: auto;
         padding: 17px 0 19px 15px;
-        &:focus{
+        &:focus {
           outline: 2px solid $mainBackgroundColor;
         }
 
@@ -33,9 +31,6 @@
       }
 
       .newsletter__button {
-        @include buttonExtraLarge;
-        height: auto;
-        width: 172px;
         border-radius: 0 3px 3px 0;
         &:hover {
           @include buttonHover;

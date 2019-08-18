@@ -1,6 +1,5 @@
 .slider {
   position: relative;
-  margin-bottom: 78px;
 
   &__slide.slide {
     background: url(../assets/img/main-banner.jpg);
@@ -21,9 +20,8 @@
         color: $siteMainColor;
         padding-bottom: 30px;
         opacity: 0;
-        transform: translateX(40%);
-        transition: 0.8s ease-in-out;
-        transition-delay: 0.3s;
+        visibility: hidden;
+        animation: slideLeft 1.5s forwards 0.8s;
       }
 
       & .slide__text {
@@ -36,17 +34,14 @@
         padding-right: 32%;
         letter-spacing: 0.2px;
         opacity: 0;
-        transform: translateX(-40%);
-        transition: 0.8s ease-in-out;
-        transition-delay: 0.4s;
+        visibility: hidden;
+        animation: slideRight 1.5s forwards 1.2s;
       }
 
       & .slide__button {
-        @include buttonMedium;
         opacity: 0;
-        transform: translateX(40%);
-        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, color 0.2s, background-color 0.2s;
-        transition-delay: 0.5s;
+        visibility: hidden;
+        animation: slideLeft 1.5s forwards 2s;
 
         &:hover {
           @include buttonHover;
@@ -83,26 +78,5 @@
         transition: 0.2s;
       }
     }
-  }
-
-  &:hover .slide__container .slide__title,
-  &:hover .slide__container .slide__text,
-  &:hover .slide__container .slide__button {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  &:hover .slide__container .slide__title {
-    transition-delay: 0.5s;
-    transition: 0.8s ease-in-out;
-  }
-
-  &:hover .slide__container .slide__text {
-    transition-delay: 0.4s;
-    transition: 0.8s ease-in-out;
-  }
-
-  &:hover .slide__container .slide__button {
-    transition-delay: 0.3s;
-    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out, color 0.2s, background-color 0.2s;
   }
 }

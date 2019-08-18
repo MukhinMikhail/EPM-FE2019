@@ -404,11 +404,6 @@ body {
   height: 20px;
 }
 
-.header__menu.menu .menu__list .menu__item:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .header__menu.menu .menu__list .menu__link {
   text-decoration: none;
   color: #fff;
@@ -430,6 +425,8 @@ body {
 
 .header__menu.menu .menu__list .menu__link:hover {
   color: #ffe26d;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .slider {
@@ -1188,6 +1185,7 @@ body {
 
 .newsletter .newsletter__container .newsletter__form .newsletter__button {
   border-radius: 0 3px 3px 0;
+  height: auto;
 }
 
 .newsletter .newsletter__container .newsletter__form .newsletter__button:hover {

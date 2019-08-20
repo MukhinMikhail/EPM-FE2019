@@ -1,0 +1,40 @@
+.newsletter {
+  padding: 2.6vw 0 7.4vw;
+  background: url(../assets/img/newsletterBg.jpg) no-repeat top left;
+
+  .newsletter__container {
+    max-width: 576px;
+  }
+
+  .newsletter__title {
+    color: $siteMainColor;
+    margin: 0 0 26px;
+  }
+
+  .newsletter__form {
+    display: inline-flex;
+    width: 100%;
+  }
+
+  .newsletter__input {
+    @include inputSmall;
+    width: 100%;
+    height: auto;
+    padding: 14px 15px;
+    &:focus {
+      outline: 2px solid $mainBackgroundColor;
+    }
+
+    &::placeholder {
+      font-size: 19px;
+      color: #d8d8d8;
+    }
+  }
+
+  .newsletter__button {
+    border-radius: 0 3px 3px 0;
+    &:hover {
+      @include buttonHover;
+    }
+  }
+}

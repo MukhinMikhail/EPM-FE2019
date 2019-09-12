@@ -1,0 +1,12 @@
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.container {
+  @include content-block;
+  &.container_inline-flex {
+    display: inline-flex;
+  }
+}
+
+

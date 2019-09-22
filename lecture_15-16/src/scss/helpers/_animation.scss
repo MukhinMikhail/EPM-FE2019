@@ -1,0 +1,36 @@
+@keyframes heartBeat {
+  0% {
+    transform: translate(-50%, -48%) scale(1);
+  }
+  25% {
+    transform: translate(-50%, -48%) scale(1.1);
+  }
+  75% {
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -48%) scale(1);
+  }
+}
+@keyframes slideLeft {
+  from {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}

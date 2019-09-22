@@ -1,0 +1,58 @@
+.price {
+  padding: 4vw 0 4.4vw;
+  .price__container {
+    max-width: 708px;
+  }
+  .price__title {
+    letter-spacing: -0.9px;
+    margin: 0 0 42px;
+  }
+
+  .price__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .items__subject:last-child {
+      border-right: 0;
+    }
+  }
+
+  .items__subject {
+    border-right: 2px solid #ededed;
+    width: 33.3%;
+    perspective: 300px;
+    outline: 0;
+
+    &:hover {
+      .subject__info-block {
+        transform: rotateX(360deg) scale(1.2);
+      }
+      .subject__button {
+        @include buttonHover;
+      }
+    }
+
+    .subject__info-block {
+      width: 100%;
+      transition: all 2s ease-in-out, scale 2s ease-in-out 3s;
+    }
+
+    .subject__cost {
+      color: $subTextColor;
+      text-transform: capitalize;
+    }
+    .subject__list {
+      text-align: center;
+      margin-bottom: 18px;
+
+      .subject__item {
+        font-size: 10px;
+        line-height: 22px;
+      }
+    }
+    .subject__button {
+      background-color: $alternativeBackgroundColor;
+    }
+  }
+}

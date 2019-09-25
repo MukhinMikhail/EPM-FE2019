@@ -1,0 +1,14 @@
+
+.table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  
+    .table__title,
+    .table__cost,
+    .table__row {
+      width: 33.3%;
+      text-align: center;
+      padding: 0;
+    }
+  }

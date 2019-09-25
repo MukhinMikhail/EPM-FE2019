@@ -1,0 +1,52 @@
+.contacts {
+  display: inline-flex;
+  width: 100%;
+  background: $alternativeBackgroundColor;
+
+  .contacts__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .contacts__title {
+      text-align: left;
+      margin: 40px 0 24px;
+    }
+    .contacts__form {
+      display: flex;
+      flex-direction: column;
+
+      .contacts__label {
+        @include itemTitle;
+        font-size: 11px;
+        margin-bottom: 8px;
+      }
+
+      .contacts__input {
+        @include inputSmall;
+        padding: 5px;
+        box-sizing: border-box;
+        margin-bottom: 18px;
+
+        &:focus {
+          outline: 2px solid $mainBackgroundColor;
+        }
+
+        &_large {
+          @extend .contacts__input;
+          @include inputMedium;
+          resize: none;
+        }
+      }
+
+      .contacts__button {
+        background: $mainBackgroundColor;
+        color: $siteMainColor;
+        &:hover {
+          color: $subTextColor;
+          background-color: $sendButtonBackgroundHover;
+        }
+      }
+    }
+  }
+}

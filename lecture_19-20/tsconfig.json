@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "removeComments": true,
+        //"outDir": "./src/typescript/appts",
+        "sourceMap": true
+        //"outFile": "typescript/app.js"
+    }
+}

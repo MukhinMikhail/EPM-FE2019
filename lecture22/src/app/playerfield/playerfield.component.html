@@ -1,0 +1,6 @@
+<h1>{{name}}</h1>
+<div class="player__y" *ngFor="let i of axisY">
+    <div class="player__x" *ngFor="let j of axisX">
+        <app-cell (click)="test(i,j)" [axisY]="axisY[i]" [axisX]='axisX[j]'></app-cell>
+    </div>
+</div>

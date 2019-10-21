@@ -1,0 +1,11 @@
+:host {
+    display: inline-flex;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #ffffff;
+}

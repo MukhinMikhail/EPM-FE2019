@@ -1,0 +1,16 @@
+:host {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 0 20px;
+    padding: 40px;
+    background: #ccc;
+    border-radius: 15px;
+}
+
+.player__y {
+    display: flex;
+}
+
+.player__x {
+    display: inline-flex;
+}

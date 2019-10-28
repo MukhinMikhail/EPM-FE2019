@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CellComponent } from './cell/cell.component';
 import { PlayerfieldComponent } from './playerfield/playerfield.component';
+import { FieldService } from './field.service';
+import { ShipConfigurationComponent } from './ship-configuration/ship-configuration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CellComponent,
     PlayerfieldComponent,
+    CellComponent,
+    ShipConfigurationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [FieldService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -1,6 +1,10 @@
 <h1>{{name}}</h1>
-<div class="player__y" *ngFor="let i of axisY">
-    <div class="player__x" *ngFor="let j of axisX">
-        <app-cell (click)="test(i,j)" [axisY]="axisY[i]" [axisX]='axisX[j]'></app-cell>
+<div class="field__wrapper">
+    <div class="player__x" *ngFor="let item of fieldArray; let i = index">
+        <div class="player__y" *ngFor="let cell of item; let j = index">
+            <app-cell [ngClass]="{isShip: fieldArray[i][j].status == 'ship',
+                    isSea: fieldArray[i][j].status == 'sea',
+                    isInterface: fieldArray[i][j].status == 'interface'}" [name]="fieldArray[i][j].name" (click)="test(fieldArray[i][j].status)"></app-cell>
+        </div>
     </div>
 </div>

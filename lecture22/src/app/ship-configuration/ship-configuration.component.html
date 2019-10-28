@@ -1,0 +1,3 @@
+<div (click)="hightlightStatus[i]=!hightlightStatus[i]" [class.active]="hightlightStatus[i]" *ngFor="let item of ships, let i = index">
+    {{item.name}}
+</div>

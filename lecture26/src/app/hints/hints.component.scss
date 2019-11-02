@@ -1,0 +1,16 @@
+:host {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1200px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.hint {
+    text-align: center;
+}

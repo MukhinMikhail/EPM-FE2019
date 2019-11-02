@@ -1,0 +1,16 @@
+:host {
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    border: 1px solid #007f80;
+    background-color: #fff;
+}
+
+.nemedCell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    user-select: none;
+}

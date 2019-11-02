@@ -1,4 +1,5 @@
-import { TestBed } from '@angular/core/testing';
+import { FieldService } from './../field.service';
+import { Cell } from '../interfaces/cell.interface';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -8,25 +9,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PlayerfieldComponent implements OnInit {
   @Input() name: string;
-  private axisX: Array<number>;
-  private axisY: Array<number>;
+  public fieldArray;
 
-
-  constructor() {
+  constructor(private fieldService: FieldService) {
     this.name = name;
-    this.axisX = this.fillArray(10);
-    this.axisY = this.fillArray(10);
-  }
-
-  fillArray(arrayLength) {
-    return Array.from({length: arrayLength}, (v, k) => k + 1);
+    this.fieldArray = this.fieldService.fillFields(11);
   }
 
   ngOnInit() {
   }
 
-  test(i,j){
-    console.log(i,j);
+  test(something) {
+    console.log(something);
   }
-
 }

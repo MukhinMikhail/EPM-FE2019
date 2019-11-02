@@ -6,15 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./cell.component.scss']
 })
 export class CellComponent implements OnInit {
-  @Input() axisX: Array<number>;
-  @Input() axisY: Array<number>;
+  @Input() name: string;
   constructor() { }
 
   ngOnInit() {
   }
-
-  thsClk() {
-    console.log(123);
-  }
-
 }

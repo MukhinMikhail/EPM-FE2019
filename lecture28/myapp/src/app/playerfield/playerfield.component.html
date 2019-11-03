@@ -1,0 +1,11 @@
+<h1 *ngIf="isPlayer">{{name}}</h1>
+<h1 *ngIf="!isPlayer">{{status}}</h1>
+<div class="field__wrapper">
+    <div class="player__x" *ngFor="let item of fieldArray; let i = index">
+        <div class="player__y" *ngFor="let cell of item; let j = index">
+            <app-cell [ngClass]="{isShip: fieldArray[i][j].status == 'ship',
+                    isSea: fieldArray[i][j].status == 'sea',
+                    isInterface: fieldArray[i][j].status == 'interface'}" [name]="fieldArray[i][j].name" (click)="shipsService.setCoords(i,j)"></app-cell>
+        </div>
+    </div>
+</div>

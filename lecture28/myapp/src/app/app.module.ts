@@ -16,7 +16,7 @@ import { BattleShipsComponent } from './battle-ships/battle-ships.component';
 
 const appRoutes: Routes = [
   { path: 'game', component: BattleShipsComponent },
-  { path: 'auth', component: LoginComponent },
+  { path: '', component: LoginComponent },
 ];
 
 @NgModule({

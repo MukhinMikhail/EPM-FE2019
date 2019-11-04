@@ -53,6 +53,7 @@ export class LoginComponent implements OnInit {
     }
 
     /** TODO: Обработка данных формы */
-    this.router.navigate(['/game']);
+
+    this.router.navigate(['./game']);
   }
 }
